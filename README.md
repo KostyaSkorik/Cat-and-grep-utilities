@@ -1,4 +1,4 @@
-# Simple Bash Utiles
+# Simple Bash Utils
 
 ## As part of my studies at school №21, I implemented my own versions of embedded Linux utilities (cat and grep) in the C language. My code is in the develop branch.
 
