@@ -4,7 +4,7 @@ void parser(int argc, char *argv[], struct opt *opt) {
   int c = 0;
 
   while (c != -1) {
-    c = getopt(argc, argv, "e:ivclnshf:");
+    c = getopt(argc, argv, "+e:ivclnshf:");
     switch (c) {
       case 'e':
         opt->e = 1;
@@ -142,13 +142,13 @@ void c_flag(const char *filePath, int matches, int flag) {
 void l_flag(const char *filePath) { printf("%s\n", filePath); }
 
 void f_flag(const char *filePath, struct opt *option) {
+  printf("%s",filePath);
   FILE *stream = fopen(filePath, "r");
   if (stream) {
     char buffer[1024];
     while (fgets(buffer, sizeof(buffer), stream) != NULL) {
-      buffer[strcspn(buffer, "\n")] = 0;
-      snprintf(option->templates[option->temp_c++], sizeof(buffer), "%s",
-               buffer);
+      if (buffer[strlen(buffer) - 1] == '\n') buffer[strlen(buffer) - 1] = '\0';
+      strcpy(option->templates[option->temp_c++],buffer);
     }
     fclose(stream);
   } else {

@@ -18,7 +18,7 @@ struct opt {
   int h;
   int f;
   int temp_c;
-  char templates[50][1024];
+  char templates[100][1024];
 };
 
 void parser(int argc, char *argv[], struct opt *opt);

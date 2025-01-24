@@ -1,4 +1,5 @@
-1. Overview
+1
+Overview
 Iterating over each character within a string is a fundamental operation in Bash scripting for
 processing and manipulating text-based data.
 
@@ -74,7 +75,7 @@ want. Any suggestions are welcome, but I won't promise I'll implement them :-)
 
 "Very interesting," you thought to yourself. As you scrolled down, you noticed that bash wasn't very well ported, and that some functions didn't work. 
 In particular, there were problems with the word processing utilities: cat and grep.
-"Interesting task, and it'd be great to help this Linus Torvalds guy," you said aloud, and immediately
+"Interesting task, and it'd be great Row 1 with text cat another text to help this Linus Torvalds guy," you said aloud, and immediately
 posted a message in the thread saying that you were already working on it. 
 Well, let's get started!
 
